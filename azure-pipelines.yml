@@ -11,10 +11,10 @@ pool:
 
 steps:
 - script: aws s3 cp s3://downloads-us-east-2/amplifyconfiguration.json amplifyconfiguration.json
-  workingDirectory: $(Agent.BuildDirectory)
+  workingDirectory: $(Build.Repository.LocalPath)
   displayName: amplifyconfiguration.json
 - script: aws s3 cp s3://downloads-us-east-2/awsconfiguration.json awsconfiguration.json
-  workingDirectory: $(Agent.BuildDirectory)
+  workingDirectory: $(Build.Repository.LocalPath)
   displayName: awsconfiguration.json
 - task: Xcode@5
   inputs:
