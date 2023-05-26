@@ -10,10 +10,10 @@ pool:
   name: EC2 MAC
 
 steps:
-- script: aws cp s3 s3://downloads-us-east-2/amplifyconfiguration.json amplifyconfiguration.json
+- script: aws s3 cp s3://downloads-us-east-2/amplifyconfiguration.json amplifyconfiguration.json
   workingDirectory: $(Agent.BuildDirectory)
   displayName: amplifyconfiguration.json
-- script: aws cp s3 s3://downloads-us-east-2/awsconfiguration.json awsconfiguration.json
+- script: aws s3 cp s3://downloads-us-east-2/awsconfiguration.json awsconfiguration.json
   workingDirectory: $(Agent.BuildDirectory)
   displayName: awsconfiguration.json
 - task: Xcode@5
