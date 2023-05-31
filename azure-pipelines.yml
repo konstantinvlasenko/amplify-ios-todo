@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: EC2 MAC
+  name: aws
 
 steps:
 - script: aws s3 cp s3://downloads-us-east-2/amplifyconfiguration.json amplifyconfiguration.json
